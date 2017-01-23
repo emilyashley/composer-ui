@@ -1,13 +1,24 @@
-.btn-composer:hover {
-  background: #e6e6e6;
+body {
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  color: #333333;
+  font-size: 1em;
+  line-height: 1.5;
 }
-.menu i:hover {
-  color: #e6e6e6;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-size: 1em;
 }
-.selectedRow,
-.selectedRow > td {
-  background-color: #e6e6e6 !important;
+.sidebar {
+  display: block;
+  float: left;
+  margin-right: 2.3576516%;
+  width: 23.2317613%;
 }
-.loom-dialog.dialog-warning .modal-footer {
-  border-top: none;
+.sidebar:last-child {
+  margin-right: 0;
 }
