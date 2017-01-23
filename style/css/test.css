@@ -1,0 +1,13 @@
+.btn-composer:hover {
+  background: #e6e6e6;
+}
+.menu i:hover {
+  color: #e6e6e6;
+}
+.selectedRow,
+.selectedRow > td {
+  background-color: #e6e6e6 !important;
+}
+.loom-dialog.dialog-warning .modal-footer {
+  border-top: none;
+}
