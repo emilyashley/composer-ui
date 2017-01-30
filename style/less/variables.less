@@ -6,24 +6,40 @@
 // For examples of methodology and how to use spacing read:
 // https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#.g7a6k7roq
 
-@space-inset-default: 16px 16px 16px 16px;
-@space-inset-xs: 4px 4px 4px 4px;
-@space-inset-s: 8px 8px 8px 8px;
-@space-inset-m: 16px 16px 16px 16px;
-@space-inset-l: 32px 32px 32px 32px;
-@space-inset-xl: 64px 64px 64px 64px;
-@space-stack-default: 0 0 16px 0;
-@space-stack-xs: 0 0 4px 0;
-@space-stack-s: 0 0 8px 0;
-@space-stack-m: 0 0 16px 0;
-@space-stack-l: 0 0 32px 0;
-@space-stack-xl: 0 0 64px 0;
-@space-default: 16px;
 @space-xs: 4px;
 @space-s: 8px;
 @space-m: 16px;
 @space-l: 32px;
 @space-xl: 64px;
+@space-default: 16px;
+
+@space-inset-default: @space-m @space-m @space-m @space-m;
+@space-inset-xs: @space-xs @space-xs @space-xs @space-xs;
+@space-inset-s: @space-s @space-s @space-s @space-s;
+@space-inset-m: @space-m @space-m @space-m @space-m;
+@space-inset-l: @space-l @space-l @space-l @space-l;
+@space-inset-xl: @space-xl @space-xl @space-xl @space-xl;
+
+@space-stack-default: 0 0 @space-m 0;
+@space-stack-xs: 0 0 @space-xs 0;
+@space-stack-s: 0 0 @space-s 0;
+@space-stack-m: 0 0 @space-m 0;
+@space-stack-l: 0 0 @space-l 0;
+@space-stack-xl: 0 0 @space-xl 0;
+
+@space-squish-default: @space-m @space-l;
+@space-squish-xs: 2px @space-xs;
+@space-squish-s: @space-xs @space-s;
+@space-squish-m: @space-s @space-m;
+@space-squish-l: @space-m @space-l;
+@space-squish-xl: @space-l @space-xl;
+
+@space-stretch-default: @space-m @space-s;
+@space-stretch-xs: @space-xs 2px;
+@space-stretch-s: @space-s @space-xs;
+@space-stretch-m: @space-m @space-s;
+@space-stretch-l: @space-l @space-m;
+@space-stretch-xl: @space-xl @space-l;
 
 // Colors
 
@@ -48,6 +64,11 @@
 
 @teal-100: #bcdadb;
 @teal-500: #00abaf;
+
+@blue-300: #0e83e8;
+@blue-500: #0f6cba;
+
+@red-500: #b51521;
 
 // Typography
 

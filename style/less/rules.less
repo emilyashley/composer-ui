@@ -15,7 +15,7 @@ h5,
 h6,
 p {
     font-family: @base-font-family;
-    font-size: @base-font-size;
+    font-size: 0.9em;
 }
 
 // Buttons
@@ -24,14 +24,15 @@ button {
     background-color: @teal-500;
     color: @white;
     .border-radius(3px);
+    padding: @space-squish-s;
 }
 
 // Composer
 
 .sidebar {
 	.span-columns(4);
-    .outer-container();
-
+	box-sizing: border-box;
+	height: 100%;
 	background-color: @gray-50;
 	padding: @space-inset-l;
 }
@@ -43,13 +44,60 @@ button {
 }
 
 .sidebar-instructions {
-    .span-columns(3, 4);
+    float: left;
+    padding: @space-stack-m;
 }
 
 .sidebar-button {
-    .span-columns(1, 4);
+    float: left;
+    margin: @space-stack-m;
+    
+    @media (min-width: 1260px) {
+        float: right;
+    }
 }
 
 .contents-chapter {
     .clearfix();
+    .span-columns(12);
+    .outer-container();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid @gray-200;
+    padding: @space-m 0 @space-m 0;
+}
+
+.contents-summary {
+    .span-columns(11, 12);
+    h2 {
+        font-weight: 700;
+        float: left;
+        padding-right: @space-m;
+    }
+    h2.chapter-number {
+        font-weight: 300;
+        float: left;
+        padding-right: @space-s;
+    }
+    .delete {
+        float: left;
+        color: @gray-600;
+        padding-top: 2px;
+        &:hover {
+            color: @red-500;
+        }
+    }
+    p {
+        .clearfix();
+    }
+}
+
+.arrow {
+    .span-columns(1, 12);
+    color: @blue-500;
+    padding-left: @space-m;
+    &:hover {
+        color: @blue-300;
+    }
 }
