@@ -1,4 +1,5 @@
 // Typography
+
 body {
 	font-family: @base-font-family;
     color: @base-font-color;
@@ -11,14 +12,44 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
     font-family: @base-font-family;
     font-size: @base-font-size;
 }
 
-p {
+// Buttons
+
+button {
+    background-color: @teal-500;
+    color: @white;
+    .border-radius(3px);
 }
+
+// Composer
 
 .sidebar {
 	.span-columns(4);
+    .outer-container();
+
+	background-color: @gray-50;
+	padding: @space-inset-l;
+}
+
+.sidebar-title {
+    font-weight: 900;
+    font-size: @base-font-size + .2;
+    margin: @space-stack-s;
+}
+
+.sidebar-instructions {
+    .span-columns(3, 4);
+}
+
+.sidebar-button {
+    .span-columns(1, 4);
+}
+
+.contents-chapter {
+    .clearfix();
 }
