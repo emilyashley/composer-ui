@@ -18,13 +18,65 @@ p {
     font-size: 0.9em;
 }
 
-// Buttons
+// Buttons & Links
 
 button {
     background-color: @teal-500;
     color: @white;
-    .border-radius(3px);
+    font-size: 13px;
+    .border-radius(2px);
     padding: @space-squish-s;
+    &:hover {
+        background-color: @teal-300;
+    }
+}
+
+a {
+    color: @blue-500;
+    &:hover {
+        color: @blue-300;
+    }
+}
+
+// Header
+
+header {
+    padding: @space-squish-l;
+    height: 4em;
+    background-color: #0f1927;
+    color: @white;
+    .story-info {
+        float: left;
+        margin-right: @space-xl;
+        h1 {
+            font-size: 1.3em;
+        }
+        a {
+            font-size: 0.9em;
+        }
+    }
+    .preview {
+        float: left;
+        padding: 20px 0;
+        p, i {
+            float: left;
+            padding-right: @space-s;
+        }
+        i {
+            padding-top: 2px;
+        }
+    }
+    .autosave {
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px 0;
+        p {
+            margin-right: @space-m;
+        }
+        button {
+            margin-right: @space-m;
+        }
+    }
 }
 
 // Composer
