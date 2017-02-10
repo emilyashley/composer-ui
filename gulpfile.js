@@ -10,3 +10,8 @@ gulp.task('less', function () {
     }))
     .pipe(gulp.dest('./style/css'));
 });
+
+gulp.task('watch', function(){
+  gulp.watch('./style/less/*.less', ['less']);
+  // Other watchers
+})
