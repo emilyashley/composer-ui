@@ -100,8 +100,8 @@ header {
         }
     }
     .autosave {
-        display: flex;
-        justify-content: flex-end;
+        .mixin-display-flex();
+        .mixin-justify-content(flex-end);
         padding: 20px 0;
         p {
             margin-right: @space-m;
@@ -129,13 +129,13 @@ header {
 }
 
 .sidebar-main {
-    display: flex;
-    flex-direction: row;
+    .mixin-display-flex();
+    .mixin-flex-direction(row);
 }
 
 .sidebar-nav {
-    display: flex;
-    flex-direction: column;
+    .mixin-display-flex();
+    .mixin-flex-direction(column);
     background-color: @gray-300;
     height: 100%;
     i {
@@ -201,8 +201,8 @@ header {
     .clearfix();
     .span-columns(12);
     .outer-container();
-    display: flex;
-    justify-content: center;
+    .mixin-display-flex();
+    .mixin-justify-content(center);
     align-items: center;
     border-top: 1px solid @gray-200;
     padding: @space-m 0 @space-m 0;
@@ -244,8 +244,8 @@ header {
 // Chapter header
 
 .chapter-header {
-    display: flex;
-    flex-direction: column;
+    .mixin-display-flex();
+    .mixin-flex-direction(column);
 }
 
 .toc-link {
@@ -254,8 +254,8 @@ header {
 }
 
 .chapter-nav {
-    display: flex;
-    justify-content: flex-start;
+    .mixin-display-flex();
+    .mixin-justify-content(flex-start);
     h1 {
         margin-right: @space-m;
 
