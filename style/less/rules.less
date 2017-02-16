@@ -42,10 +42,83 @@ a {
     }
 }
 
+// Spacing
+
+section {
+    margin: @space-stack-l;
+}
+
 // Forms
 
 .form-field {
     margin: @space-stack-m;
+    position: relative;
+
+    p {
+        margin: @space-stack-s;
+    }
+
+    // Form toggle switches
+    // The switch - the box around the slider
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 28px;
+        height: 16px;
+        vertical-align: middle;
+        margin-right: @space-s;
+    }
+
+    // Hides default HTML checkbox
+    .switch input {display:none;}
+
+    // The slider
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 10px;
+        width: 10px;
+        left: 4px;
+        bottom: 3px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    input:checked + .slider {
+        background-color: @teal-500;
+    }
+
+    input:focus + .slider {
+        box-shadow: 0 0 1px @teal-500;
+    }
+
+    input:checked + .slider:before {
+        -webkit-transform: translateX(14px);
+        -ms-transform: translateX(14px);
+        transform: translateX(14px);
+    }
+
+    // Rounded sliders
+    .slider.round {
+        border-radius: 34px;
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
 }
 
 label {
@@ -68,6 +141,29 @@ input[type=text], textarea {
     padding: @space-squish-s;
     width: 100%;
     margin-top: @space-xs;
+}
+
+input[type=radio] {
+    margin-right: @space-s;
+}
+
+.form-help-text {
+    font-family: @base-font-family;
+    font-size: 0.7em;
+    font-style: italic;
+    color: @gray-700;
+    margin: @space-stack-s;
+    &.radio {
+        margin: 0 0 @space-s 22px;
+    }
+}
+
+select {
+    box-sizing: border-box;
+    cursor: pointer;
+    .border-radius(2px);
+    border: 1px solid @gray-300;
+    .clearfix();
 }
 
 // Header
@@ -150,31 +246,34 @@ header {
 .sidebar-nav {
     background-color: @gray-300;
     height: 100%;
+    a {
+        color: @gray-800;
+    }
     i {
         padding: 8px 16px 8px 21px;
         border-width: 1px 1px 0 5px;
         border-color: @gray-400;
         border-style: solid;
+        border-left: 5px solid @gray-300;
+        width: 65px;
         text-align: center;
         cursor: pointer;
         box-sizing: border-box;
         &.active {
             color: @teal-500;
             background-color: @gray-50;
-            border-width: 0 0 0 5px;
-            border-color: @teal-500;
+            border-width: 1px 1px 0 5px;
+            border-color: @gray-50;
             border-style: solid;
-            box-sizing: border-box;
-            padding: 8px 17px 9px 21px;
+            border-left: 5px solid @teal-500;
         }
         &:hover {
             color: @teal-300;
             background-color: @gray-25;
-            border-width: 0 0 0 5px;
-            border-color: @teal-300;
+            border-width: 1px 1px 0 5px;
+            border-color: @gray-25;
             border-style: solid;
-            box-sizing: border-box;
-            padding: 8px 17px 9px 21px;
+            border-left: 5px solid @teal-300;
         }
     }
 }
