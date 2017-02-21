@@ -30,6 +30,7 @@ button {
     font-size: 13px;
     .border-radius(2px);
     padding: @space-squish-s;
+    cursor: pointer;
     &:hover {
         background-color: @teal-300;
     }
@@ -42,10 +43,18 @@ a {
     }
 }
 
-// Spacing
+// Spacing & Alignment
 
 section {
     margin: @space-stack-l;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
 }
 
 // Forms
@@ -340,7 +349,7 @@ header {
 
 .sidebar-button {
     float: left;
-    margin: @space-stack-m;
+    margin: 0 0 @space-m @space-m;
     
     @media (min-width: 1260px) {
         float: right;
