@@ -141,7 +141,7 @@ abbr {
     color: @red-500;
 }
 
-input[type=text], textarea {
+input[type=text], textarea, input[type=date], input[type=time] {
     border: 1px solid @gray-300;
     .border-radius(2px);
     font-size: 0.9em;
@@ -290,12 +290,6 @@ header {
 .flexbox .sidebar-nav {
     .mixin-display-flex();
     .mixin-flex-direction(column);
-    i {
-        &.active {
-        }
-        &:hover {
-        }
-    }
 }
 
 .no-flexbox .sidebar-nav {
@@ -304,10 +298,6 @@ header {
     float: left;
     i {
         width: 60px;
-        &.active {
-        }
-        &:hover {
-        }
     }
 }
 
@@ -458,4 +448,45 @@ header {
     padding: @space-squish-m;
     margin-top: @space-m;
     .border-radius(4px);
+}
+
+// Accordions
+.title-row {
+    height: @space-m;
+    padding: @space-s @space-s 12px @space-s;
+}
+
+.active {
+    .title-row {
+        background-color: fade(@teal-500, 15%);
+    }
+}
+
+.accordion-item {
+    border-top: 1px solid @gray-200;
+    margin: 0;
+
+    h2 {
+        float: left;
+    }
+
+    i {
+        &.delete {
+            float: left;
+            color: @gray-600;
+            padding-top: 2px;
+            padding-left: @space-m;
+            &:hover {
+                color: @red-500;
+            }
+        }
+        &.caret {
+            float: right;
+        }
+    }
+
+    form {
+        clear: both;
+        padding: @space-squish-m;
+    }
 }
