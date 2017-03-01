@@ -38,23 +38,37 @@
                     <a href="playback_settings.html"><i class="fa fa-play-circle-o"></i></a>
                     <a href="legend_settings.html"><i class="fa fa-list-alt"></i></a>
                     <a href="#"><i class="fa fa-clone"></i></a>
-                    <a href="#"><i class="fa fa-map-pin active"></i></a>
-                    <a href="storyframes.html"><i class="fa fa-object-group"></i></a>
+                    <a href="storypins.html"><i class="fa fa-map-pin"></i></a>
+                    <a href="#"><i class="fa fa-object-group active"></i></a>
                 </nav>
                 <div class="sidebar-content">
                     <section>
-                        <h2 class="section-title float-left">Storypins</h2>
-                        <button class="sidebar-button float-right">Bulk Upload</button>
-                        <button class="sidebar-button float-right">Add New StoryPin</button>
+                        <h2 class="section-title float-left">StoryFrames</h2>
+                        <button class="sidebar-button float-right">Add New StoryFrame</button>
+                        <p class="clearfix">
+                            A StoryFrame defines the area of the map a viewer of your story will see.
+                            Set the default StoryFrame below, or create additional StoryFrames to
+                            override the part of the map your viewers will see for this chapter.
+                        </p>
+                    </section>
+                    <section class="accordion-item active">
+                        <div class="title-row">
+                            <h2>Default StoryFrame</h2>
+                            <i class="fa fa-trash delete"></i>
+                            <i class="fa fa-caret-up caret"></i>
+                        </div>
+                        <p>
+                            Set the StoryFrame your viewers will see when this chapter begins.
+                        </p>
                     </section>
                     <section class="accordion-item">
                         <div class="title-row">
-                            <h2>First StoryPin</h2>
+                            <h2>StoryFrame Name 1</h2>
                             <i class="fa fa-trash delete"></i>
                             <i class="fa fa-caret-down caret"></i>
                         </div>
                     </section>
-                    <section class="accordion-item active">
+                    <section class="accordion-item">
                         <div class="title-row">
                             <h2>StoryPin Name</h2>
                             <i class="fa fa-trash delete"></i>
@@ -62,22 +76,10 @@
                         </div>
                         <form>
                             <div class="form-field">
-                                <label for="storypin_title">StoryPin Title</label>
+                                <label for="storypin_title">StoryFrame Title</label>
                                 <strong><abbr title="required">*</abbr></strong>
                                 <br />
                                 <input id="storypin_title" type="text" name="storypin_title" />
-                            </div>
-                            <div class="form-field">
-                                <label for="storypin_text">StoryPin Text</label>
-                                <strong><abbr title="required">*</abbr></strong>
-                                <br />
-                                <input id="storypin_text" type="text" name="storypin_text" />
-                            </div>
-                            <div class="form-field">
-                                <label for="storypin_media">StoryPin Media</label>
-                                <strong><abbr title="required">*</abbr></strong>
-                                <br />
-                                <textarea id="storypin_media" rows="10" name="storypin_media" required /></textarea>
                             </div>
                             <div class="form-field">
                                 <label for="start_time">Start Time</label>
@@ -92,44 +94,25 @@
                                 <br />
                                 <input type="date" name="end_time_date">
                                 <input type="time" name="end_time_time">
+                                <br /><br />
+                                <p>Set placement for this StoryFrame on the map.</p>
                             </div>
-                            <div class="form-field">
-                                <label for="storypin_playback_options">StoryPin Playback Options</label>
-                                <br />
-                                <label class="switch">
-                                    <input type="checkbox" for="timeline">
-                                    <div class="slider round"></div>
-                                </label>
-                                <label for="timeline">Show StoryPin on Timeline</label>
-                                <br />
-                                <label class="switch">
-                                    <input type="checkbox" for="map">
-                                    <div class="slider round"></div>
-                                </label>
-                                <label for="map">Show StoryPin on Map</label>
-                                <br />
-                                <label class="switch">
-                                    <input type="checkbox" for="pause_playback">
-                                    <div class="slider round"></div>
-                                </label>
-                                <label for="pause_playback">Pause playback when StoryPin appears</label>
-                                <br />
-                                <label class="switch">
-                                    <input type="checkbox" for="play_embedded">
-                                    <div class="slider round"></div>
-                                </label>
-                                <label for="play_embedded">Play embedded StoryPin media automatically</label>
-                            </div>
-                        </div>
                         </form>
+                    </section>
+                    <section class="accordion-item">
+                        <div class="title-row">
+                            <h2>StoryFrame Name 3</h2>
+                            <i class="fa fa-trash delete"></i>
+                            <i class="fa fa-caret-down caret"></i>
+                        </div>
                     </section>
                 </div>
             </div>
         </div>
         <div class="map-area">
             <div class="interactive-banner">
-                <strong>Placement for "StoryPin Name":</strong> Click the map to add or edit the location of your StoryPin.
-                Set the title, text, date, time, and other options for your StoryPin in the left sidebar.
+                <strong>Placement for "Default StoryFrame":</strong> Place your StoryFrame over the part of the map you want
+                viewers to see when they play the story. Drag the corners to resize.
             </div>
         </div>
     </body>
